@@ -32,12 +32,12 @@
       const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
       const isChrome = /Chrome/.test(userAgent) && /Google Inc/.test(navigator.vendor);
 
-      const vercelURL = 'https://shivi.vercel.app/';
+      const vercelURL = 'https://shivi-gupta.vercel.app/';
 
       if (isInAppBrowser) {
         if (isAndroid) {
           // Auto open in Chrome
-          window.location.href = `intent://shivi.vercel.app/#Intent;scheme=https;package=com.android.chrome;end`;
+          window.location.href = `intent://shivi-gupta.vercel.app/#Intent;scheme=https;package=com.android.chrome;end`;
         } else if (isIOS) {
           // iOS cannot force open - show message
           document.querySelector('.message').innerHTML = `
@@ -55,7 +55,7 @@
         // Not in Chrome
         if (confirm("This site works best in Chrome. Do you want to open it in Chrome?")) {
           if (isAndroid) {
-            window.location.href = `intent://shivi.vercel.app/#Intent;scheme=https;package=com.android.chrome;end`;
+            window.location.href = `intent://shivi-gupta.vercel.app/#Intent;scheme=https;package=com.android.chrome;end`;
           } else {
             alert(`Please copy and open this link in Chrome:\n${vercelURL}`);
             window.open(vercelURL, '_blank');
